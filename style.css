@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --primary: #2D5A27;
+  --primary-light: #508D4E;
+  --primary-soft: #E8F0E6;
+  --secondary: #B35D38; /* Terracota */
+  --accent: #D4AF37; /* Dourado suave */
+  --bg-main: #F8F9F5;
+  --bg-white: #FFFFFF;
+  --text-main: #1A2419;
+  --text-muted: #555E54;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --radius: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+}
+
+/* Reusable Components */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 40px;
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: var(--transition);
+  box-shadow: 0 10px 20px rgba(45, 90, 39, 0.2);
+  border: none;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(45, 90, 39, 0.3);
+}
+
+.btn-whatsapp svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  padding-top: 140px;
+  padding-bottom: 80px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 24px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  transition: var(--transition);
+}
+
+.hero-image:hover img {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* Pain Points */
+.pains {
+  background-color: var(--bg-white);
+  border-radius: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.pains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.pain-card {
+  padding: 40px;
+  background: var(--bg-main);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.pain-card:hover {
+  background: var(--primary-soft);
+  transform: translateY(-5px);
+}
+
+.pain-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Process Section */
+.how-it-works {
+  text-align: center;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.step-item {
+  position: relative;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 0 auto 20px;
+  font-size: 1.2rem;
+}
+
+/* Benefits */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.benefit-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.benefit-box i {
+  font-size: 2.5rem;
+  color: var(--secondary);
+}
+
+/* Emotional Section */
+.emotional {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  text-align: center;
+  border-radius: 40px;
+  margin: 100px auto;
+  max-width: 1000px !important;
+}
+
+.emotional h2 {
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive fixes */
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 100px;
+    gap: 40px;
+  }
+  .hero-content p {
+    margin: 0 auto 40px;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-image img {
+    transform: none;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

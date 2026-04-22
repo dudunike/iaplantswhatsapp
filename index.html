@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAPLANTS - Entenda sua planta com apenas uma foto</title>
+    <meta name="description" content="Descubra o que sua planta precisa com a ajuda da inteligência artificial. Simples, prático e pensado para quem ama a natureza.">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Meta Pixel + UTM Tracking - LeadFlow -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '712411151419575');
+    fbq('track', 'PageView');
+    
+    // UTM Tracking Logic
+    window.addEventListener('DOMContentLoaded', function() {
+      var params = new URLSearchParams(window.location.search);
+      var cmp = params.get('utm_campaign') || '';
+      var src = params.get('utm_source') || '';
+      var ad = params.get('utm_content') || '';
+      
+      if(cmp || src || ad){
+        document.querySelectorAll('a').forEach(function(b){
+          if(!b.href || b.href.startsWith('javascript:')) return;
+          try {
+            var url = new URL(b.href);
+            // Para links de WhatsApp
+            if(b.href.indexOf('wa.me') !== -1 || b.href.indexOf('api.whatsapp.com') !== -1) {
+                var refTag = '[REF:cmp=' + cmp + '&src=' + src + '&ad=' + ad + ']';
+                var currentText = url.searchParams.get('text') || '';
+                url.searchParams.set('text', currentText + ' ' + refTag);
+            } else {
+                // Outros Links
+                if(cmp && !url.searchParams.has('utm_campaign')) url.searchParams.set('utm_campaign', cmp);
+                if(src && !url.searchParams.has('utm_source')) url.searchParams.set('utm_source', src);
+                if(ad && !url.searchParams.has('utm_content')) url.searchParams.set('utm_content', ad);
+            }
+            b.href = url.toString();
+          } catch(e) {}
+        });
+      }
+    });
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=712411151419575&ev=PageView&noscript=1"
+    /></noscript>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <nav style="position: absolute; width: 100%; padding: 30px 50px; z-index: 10;">
+        <div style="font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--primary); font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z" fill="currentColor"/>
+                <path d="M12 7V17M7 12H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            IAPLANTS
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero container reveal">
+        <div class="hero-content">
+            <span class="tag">Tecnologia Simples para Natureza</span>
+            <h1>Sua planta agora tem voz. Descubra o que ela precisa.</h1>
+            <p>Com apenas uma foto, nossa inteligência artificial ajuda você a entender cada sinal das suas plantas, garantindo que elas cresçam bonitas, fortes e saudáveis.</p>
+            <a href="https://wa.me/55?text=Olá! Gostaria de conhecer o IAPLANTS." class="btn-whatsapp">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Quero conhecer no WhatsApp
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="/hero.png" alt="Mulher cuidando de plantas com aplicativo IAPLANTS">
+        </div>
+    </header>
+
+    <!-- Public Identification -->
+    <section class="pains container reveal">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Cuidar das plantas não precisa ser um mistério</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem;">Você já se sentiu inseguro sem saber se estava regando demais ou de menos? Ou por que aquela folha começou a amarelar?</p>
+        </div>
+        <div class="pains-grid">
+            <div class="pain-card">
+                <h3>Folhas Amarelas?</h3>
+                <p>Muitas vezes é apenas um sinal de sede ou excesso de luz. Nós ajudamos você a identificar o motivo exato em segundos.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Dúvida na Rega?</h3>
+                <p>Nem toda planta gosta de água todo dia. Saiba exatamente quando e quanto molhar cada espécie do seu jardim.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Pragas Inesperadas?</h3>
+                <p>Aquelas manchinhas podem ser resolvidas com cuidados simples e naturais, sem complicação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works container reveal">
+        <span class="tag">Simples e Rápido</span>
+        <h2 style="font-size: 2.5rem; margin-bottom: 50px;">Como o IAPLANTS ajuda você</h2>
+        
+        <div style="margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow);">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/e8lqc7HfNoQ" title="Saiba como IAPLANTS pode te ajudar!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="steps">
+            <div class="step-item reveal">
+                <div class="step-number">1</div>
+                <h3>Tire uma Foto</h3>
+                <p>Use a câmera do seu celular para registrar a planta ou a folha que te preocupa.</p>
+            </div>
+            <div class="step-item reveal">
+                <div class="step-number">2</div>
+                <h3>Análise Inteligente</h3>
+                <p>Nossa tecnologia analisa os sinais e identifica a espécie e as necessidades atuais.</p>
+            </div>
+            <div class="step-item reveal">
+                <div class="step-number">3</div>
+                <h3>Orientações Claras</h3>
+                <p>Você recebe um guia passo a passo, fácil de entender, para cuidar da sua planta com carinho.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="container reveal" style="background-color: var(--bg-white); border-radius: 40px; padding: 80px 40px;">
+        <div class="benefits-grid">
+            <div class="benefit-box reveal">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h3>Segurança no Cuidado</h3>
+                <p>Sinta a paz de saber que está fazendo o certo por suas plantas, sem medo de errar.</p>
+            </div>
+            <div class="benefit-box reveal">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <h3>Praticidade Diária</h3>
+                <p>Respostas rápidas na palma da sua mão, para quem não tem tempo a perder com manuais técnicos.</p>
+            </div>
+            <div class="benefit-box reveal">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <h3>Tranquilidade e Vida</h3>
+                <p>Transforme sua casa em um refúgio de paz com plantas sempre verdes e vibrantes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emotional Connection -->
+    <section class="emotional container reveal">
+        <div style="padding: 60px 20px;">
+            <h2>Sua casa merece esse carinho</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; opacity: 0.9;">
+                Ter plantas é trazer vida para dentro de casa. É um momento de pausa, de cuidado e de bem-estar. O IAPLANTS nasceu para que esse momento seja apenas de prazer, eliminando as dúvidas e trazendo a sabedoria da natureza para o seu celular.
+            </p>
+            <a href="https://wa.me/55?text=Olá! Quero cuidar melhor das minhas plantas." class="btn-whatsapp" style="background-color: white; color: var(--primary);">
+                Falar com a gente no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="container reveal">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 2.5rem;">Feito para quem ama a terra</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div class="reveal" style="padding: 30px; border: 1px solid #E0E4DE; border-radius: 20px; text-align: center;">
+                <span style="font-size: 2rem;">🏡</span>
+                <h4 style="margin-top: 15px;">Plantas em Casa</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Para quem cultiva em vasos e ambientes internos.</p>
+            </div>
+            <div class="reveal" style="padding: 30px; border: 1px solid #E0E4DE; border-radius: 20px; text-align: center;">
+                <span style="font-size: 2rem;">🌿</span>
+                <h4 style="margin-top: 15px;">Jardim e Quintal</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Para cuidar de canteiros e gramados com perfeição.</p>
+            </div>
+            <div class="reveal" style="padding: 30px; border: 1px solid #E0E4DE; border-radius: 20px; text-align: center;">
+                <span style="font-size: 2rem;">🍅</span>
+                <h4 style="margin-top: 15px;">Hortas Caseiras</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Para colher alimentos saudáveis e bem cuidados.</p>
+            </div>
+            <div class="reveal" style="padding: 30px; border: 1px solid #E0E4DE; border-radius: 20px; text-align: center;">
+                <span style="font-size: 2rem;">✨</span>
+                <h4 style="margin-top: 15px;">Iniciantes</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Para quem está começando e quer aprender do jeito certo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust / Final CTA -->
+    <section class="container reveal" style="text-align: center; padding-bottom: 150px;">
+        <hr style="border: none; border-top: 1px solid #E0E4DE; margin-bottom: 100px;">
+        <h2 style="font-size: 2.8rem; margin-bottom: 20px;">Vamos cuidar das suas plantas juntas?</h2>
+        <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Simples de usar, humano no atendimento e apaixonado pela natureza. Clique abaixo e tire suas dúvidas agora pelo WhatsApp.
+        </p>
+        <a href="https://wa.me/55?text=Olá! Vi o site e quero saber mais sobre o IAPLANTS." class="btn-whatsapp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Chamar no WhatsApp agora
+        </a>
+        <div style="margin-top: 40px; color: var(--text-muted); font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 20px;">
+            <span>✓ Fácil de usar</span>
+            <span>✓ Atendimento Humano</span>
+            <span>✓ Sem Complicação</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--primary); color: white; padding: 40px 20px; text-align: center;">
+        <p>&copy; 2026 IAPLANTS. Todos os direitos reservados. Feito com amor por quem entende de natureza.</p>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
