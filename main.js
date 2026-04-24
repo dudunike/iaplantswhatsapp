@@ -21,4 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply reveal class to elements
   const revealElements = document.querySelectorAll('.reveal');
   revealElements.forEach(el => observer.observe(el));
+
+  // Viewer count fluctuation
+  const viewerCountEl = document.getElementById('viewer-count');
+  if (viewerCountEl) {
+    let count = 47;
+    setInterval(() => {
+      // Random fluctuation between 47 and 51
+      const change = Math.floor(Math.random() * 3) - 1; // -1, 0, 1
+      count = Math.max(47, Math.min(52, count + change));
+      viewerCountEl.textContent = count;
+    }, 3000);
+  }
 });
