@@ -82,6 +82,59 @@ section {
   fill: currentColor;
 }
 
+.cta-premium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 50px;
+  background: linear-gradient(135deg, var(--secondary), #d3734a);
+  color: white;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  border-radius: 20px;
+  transition: var(--transition);
+  box-shadow: 0 20px 40px rgba(179, 93, 56, 0.3);
+  max-width: fit-content;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.cta-premium:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(179, 93, 56, 0.4);
+}
+
+.cta-premium .main-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cta-premium .sub-text {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 400;
+  margin-top: 4px;
+  font-family: 'Inter', sans-serif;
+}
+
+.cta-premium .price-badge {
+  background: white;
+  color: var(--secondary);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-left: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 .tag {
   display: inline-block;
   padding: 6px 16px;
