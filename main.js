@@ -33,4 +33,25 @@ document.addEventListener('DOMContentLoaded', () => {
       viewerCountEl.textContent = count;
     }, 3000);
   }
+
+  // Discount Popup Logic (shows after 40 seconds)
+  const popup = document.getElementById('discount-popup');
+  const closePopup = document.getElementById('popup-close');
+
+  if (popup && closePopup) {
+    setTimeout(() => {
+      popup.classList.add('active');
+    }, 40000); // 40 seconds
+
+    closePopup.addEventListener('click', () => {
+      popup.classList.remove('active');
+    });
+
+    // Optional: close if click outside the content
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        popup.classList.remove('active');
+      }
+    });
+  }
 });
